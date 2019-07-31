@@ -5,12 +5,12 @@
 				<view class="cu-item">
 					<view class="cu-avatar round lg">
 						<!-- 头像，匿名时显示统一的匿名头像，若需自定义请自行修改 -->
-						<image class="avatar round" :src="listData.anony ? 'http://img.nauzone.cn/20141118153114_aiRyY.thumb.700_0.jpeg' : listData.avatarurl"></image>
+						<image class="avatar round" :src="listData.anony ? 'https://andot.org/img/avatar.png' : listData.avatarurl"></image>
 						<view v-if="listData.mark" class="cu-tag badge bg-blue">V</view>
 					</view>
 					<view class="content padding-tbl">
 						<view class="henflex">
-							<view>{{listData.anony? '一位路过的吃瓜群众' : listData.user_name}}</view>
+							<view>{{listData.anony? '一位不愿透漏姓名的瞬友' : listData.user_name}}</view>
 							<view class="right" v-if="listData.mark">
 								<view class="cu-tag round bg-blue sm">官方</view>
 							</view>
@@ -56,9 +56,15 @@
 					</view>
 				</view>
 			</view>
-			<view class="text-gray text-sm text-right padding">
-				<text class="right">浏览:{{ listData.show_times }}</text>
-				<text class="right">点赞:{{ listData.points }}</text>
+			<view class="text-gray text-sm text-right padding an-flex-b">
+				<view class="show">
+					<text class="an-left">浏览:{{ listData.show_times }}</text>
+					<text class="an-left">点赞:{{ listData.points }}</text>
+				</view>
+				<view class="oper">
+					<image src="../../static/icon/xin.png" style="width: 30rpx; height: 30rpx;" class="an-right"></image>
+					<image src="../../static/icon/comment.png" style="width: 30rpx; height: 30rpx;" class="an-right"></image>
+				</view>
 			</view>
 		</view>
 	</view>
@@ -165,7 +171,7 @@
 	}
 	
 	.padding {
-	  padding: 30rpx;
+	  padding: 20rpx;
 	}
 	
 	.text-right {
@@ -179,13 +185,13 @@
 	}
 	
 	.padding-lr {
-	  padding-left: 30rpx;
-	  padding-right: 30rpx;
+	  padding-left: 20rpx;
+	  padding-right: 20rpx;
 	}
 	
 	.padding-tbl {
-	  padding-left: 20rpx;
-	  padding-top: 20rpx;
+	    padding-left: 20rpx;
+	    padding-top: 20rpx;
 		padding-bottom: 20rpx;
 	}
 	
@@ -306,7 +312,7 @@
 		text-align: center;
 		justify-content: center;
 		align-items: center;
-		background: #ccc;
+		background: #EBEBEB;
 		color: #fff;
 		white-space: nowrap;
 		position: relative;
@@ -357,8 +363,8 @@
 		background-color: #fff;
 		overflow: hidden;
 		border-radius: 10rpx;
-		margin-left: 30rpx;
-		margin-right: 30rpx;
+		margin-left: 10rpx;
+		margin-right: 10rpx;
 		/* border-bottom: 1px solid #EBEBEB; */
 	}
 
@@ -449,6 +455,9 @@
 		width: 100%;
 		box-sizing: border-box;
 		overflow: hidden;
+		background-color: #f6f9fe;
+		box-shadow: 0 0 14px 0 rgba(0,0,0,.08);
+		padding: 10rpx;
 	}
 	
 	.uni-swiper__dots-box {
@@ -507,5 +516,16 @@
 		align-items: center;
 		color: #fff;
 		font-size: 24upx;
+	}
+	
+	.an-flex-b{
+		display: flex; 
+		justify-content: space-between;
+	}
+	.an-right{
+		margin-right: 20rpx;
+	}
+	.an-left{
+		margin-left: 20rpx;
 	}
 </style>

@@ -24,6 +24,24 @@
 				"navigationBarTitleText": "个人中心"
 			}
 		}
+        ,{
+            "path" : "pages/publish/publish",
+            "style" : {
+				"navigationBarTitleText": "发布美好瞬间"
+			}
+        }
+		,{
+		    "path" : "pages/chat/index",
+		    "style" : {
+				"navigationBarTitleText": "瞬聊"
+			}
+		}
+		,{
+		    "path" : "pages/chat/chat/chat",
+		    "style" : {
+				"navigationBarTitleText": "瞬聊"
+			}
+		}
     ],
 	"tabBar": {
 		"color": "#000000",
@@ -32,35 +50,35 @@
 		"borderStyle": "black",
 		"list": [{
 			"pagePath": "pages/index/index",
-			"iconPath": "static/home.png",
-			"selectedIconPath": "static/home-active.png",
+			"iconPath": "static/bottom_nav/block.png",
+			"selectedIconPath": "static/bottom_nav/block-sele.png",
 			"text": "走廊"
 		},{
 			"pagePath": "pages/channel/index/list",
-			"iconPath": "static/home.png",
-			"selectedIconPath": "static/home-active.png",
+			"iconPath": "static/bottom_nav/pin.png",
+			"selectedIconPath": "static/bottom_nav/pin-sele.png",
 			"text": "频道"
 		},{
-			"pagePath": "pages/index/index",
-			"iconPath": "static/home.png",
-			"selectedIconPath": "static/home-active.png",
+			"pagePath": "pages/publish/publish",
+			"iconPath": "static/bottom_nav/plus-circle.png",
+			"selectedIconPath": "static/bottom_nav/plus-circle-sele.png",
 			"text": "发布"
 		}, {
-			"pagePath": "pages/ucenter/ucenter",
-			"iconPath": "static/center.png",
-			"selectedIconPath": "static/center-active.png",
+			"pagePath": "pages/chat/index",
+			"iconPath": "static/bottom_nav/message.png",
+			"selectedIconPath": "static/bottom_nav/message-sele.png",
 			"text": "瞬聊"
 		}, {
 			"pagePath": "pages/ucenter/ucenter",
-			"iconPath": "static/center.png",
-			"selectedIconPath": "static/center-active.png",
+			"iconPath": "static/bottom_nav/user.png",
+			"selectedIconPath": "static/bottom_nav/user-sele.png",
 			"text": "我的"
 		}]
 	},
 	"globalStyle": {
-		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "新闻资讯",
-		"navigationBarBackgroundColor": "#2F85FC",
-		"backgroundColor": "#FFFFFF"
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#00CCFF",
+		"navigationBarTitleText": "走廊",
+		"navigationBarTextStyle": "#FFFFFF"
 	}
 }

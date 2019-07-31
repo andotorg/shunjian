@@ -1,8 +1,8 @@
 <template>
 	<view class="content">
-		<view :style="'height: '+h+'px; overflow-y: auto; background-color:#f6f9fe;'">
+		<scroll-view scroll-y="true" :style="'height: '+h+'px; overflow: hidden; background-color:#f6f9fe;'">
 			<an-card :listData="item" v-for="(item, index) in lists" :key="index"></an-card>
-		</view>
+		</scroll-view>
 	</view>
 </template>
 
@@ -32,7 +32,7 @@
 						"points": "0",
 						"show_times": "0",
 						"anony": false,
-						"avatarurl": "http://img.nauzone.cn/favicon11.png"
+						"avatarurl": "https://andot.org/img/avatar.png"
 					},
 					{
 						"id": "1",
@@ -49,7 +49,7 @@
 						"points": "0",
 						"show_times": "0",
 						"anony": false,
-						"avatarurl": "http://img.nauzone.cn/favicon11.png"
+						"avatarurl": "https://andot.org/img/avatar.png"
 					},
 					{
 						"id": "1",
@@ -66,19 +66,9 @@
 						"points": "0",
 						"show_times": "0",
 						"anony": false,
-						"avatarurl": "http://img.nauzone.cn/favicon11.png"
+						"avatarurl": "https://andot.org/img/avatar.png"
 					}
-				],
-				info: [{
-					content: '内容 A'
-				}, {
-					content: '内容 B'
-				}, {
-					content: '内容 C'
-				}, {
-					content: '内容 C'
-				}],
-				current: 0,
+				]
 			}
 		},
 		methods: {
